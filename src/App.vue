@@ -4,27 +4,26 @@
       <h1>Funi</h1>
       <nav>
         <ul>
-          <li><router-link to="/">Home</router-link></li>
-          <li><router-link to="/courses">Courses</router-link></li>
-          <li><router-link to="/about">About</router-link></li>
-          <li><router-link to="/contact">Contact</router-link></li>
-          <li><router-link to="/login">Log In / Sign Up</router-link></li>
+          <li><router-link to="/">Trang chủ</router-link></li>
+          <li><router-link to="/courses">Khóa học</router-link></li>
+          <li><router-link to="/about">Thông tin</router-link></li>
+          <li><router-link to="/contact">Liên lạc</router-link></li>
+          <li><router-link to="/login">Đăng nhập/Đăng ký</router-link></li>
         </ul>
       </nav>
     </header>
 
     <main class="main-content">
-      <h2>Welcome to Funi!</h2>
-      <p>Your journey to learn online courses begins here.</p>
+      <h2>Chào mừng đến với Funi!</h2>
+      <p>Hành trình chinh phục học vấn của bạn bắt đầu từ đây.</p>
       <button class="cta-button">Explore Courses</button>
     </main>
 
     <footer class="footer">
       <div class="footer-content">
         <p>&copy; 2024 Funi. All Rights Reserved.</p>
-        <p>Placeholder for additional info.</p>
         <div class="newsletter">
-          <h3>Subscribe to our Newsletter</h3>
+          <h3>Điền mail để biết những thông tin mới nhất!</h3>
           <input type="email" placeholder="Enter your email" />
           <button class="subscribe-button">Subscribe</button>
         </div>
