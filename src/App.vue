@@ -16,7 +16,7 @@
     <main class="main-content">
       <h2>Chào mừng đến với Funi!</h2>
       <p>Hành trình chinh phục học vấn của bạn bắt đầu từ đây.</p>
-      <button class="cta-button">Explore Courses</button>
+      <button class="cta-button">Khám phá</button>
     </main>
 
     <footer class="footer">
