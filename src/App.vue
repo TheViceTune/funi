@@ -4,19 +4,27 @@
       <h1>Funi</h1>
       <nav>
         <ul>
-          <li><router-link to="/">Trang chủ</router-link></li>
-          <li><router-link to="/courses">Khóa học</router-link></li>
-          <li><router-link to="/about">Thông tin</router-link></li>
-          <li><router-link to="/contact">Liên lạc</router-link></li>
-          <li><router-link to="/login">Đăng nhập/Đăng ký</router-link></li>
+          <li>
+            <router-link to="/" active-class="active">Trang chủ</router-link>
+          </li>
+          <li>
+            <router-link to="/courses" active-class="active">Khóa học</router-link>
+          </li>
+          <li>
+            <router-link to="/about" active-class="active">Thông tin</router-link>
+          </li>
+          <li>
+            <router-link to="/contact" active-class="active">Liên lạc</router-link>
+          </li>
+          <li>
+            <router-link to="/login" active-class="active">Đăng nhập/Đăng ký</router-link>
+          </li>
         </ul>
       </nav>
     </header>
 
     <main class="main-content">
-      <h2>Chào mừng đến với Funi!</h2>
-      <p>Hành trình chinh phục học vấn của bạn bắt đầu từ đây.</p>
-      <button class="cta-button">Khám phá</button>
+      <router-view></router-view>
     </main>
 
     <footer class="footer">
@@ -33,8 +41,10 @@
 </template>
 
 <script>
+import CoursesView from './views/CoursesView.vue'
 export default {
-  name: 'App'
+  name: 'App',
+  components: CoursesView
 }
 </script>
 
@@ -46,16 +56,23 @@ export default {
 }
 
 html,
-body,
-#app {
+body {
   height: 100%;
   width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 #app {
   display: flex;
   flex-direction: column;
   font-family: Arial, sans-serif;
+  margin: 0;
+  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  padding: 0rem;
 }
 
 .header {
@@ -71,6 +88,7 @@ body,
 .header nav ul {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -88,6 +106,7 @@ body,
   align-items: center;
   text-align: center;
   padding: 2rem;
+  overflow-y: auto;
 }
 
 .cta-button {
@@ -128,7 +147,8 @@ body,
 
 .newsletter input {
   padding: 0.5rem;
-  width: 200px;
+  width: 100%;
+  max-width: 300px;
 }
 
 .subscribe-button {
@@ -143,5 +163,20 @@ body,
 
 .subscribe-button:hover {
   background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-content {
+    padding: 0;
+  }
+
+  .footer-content {
+    text-align: center;
+  }
 }
 </style>
